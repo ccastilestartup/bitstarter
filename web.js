@@ -11,7 +11,8 @@ app.get('/', function (request, response) {
 });
 
 var port = process.env.PORT || 8080;
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/css'));
+app.use(express.static(__dirname + '/js'));
 
 app.listen(port, function () {
   console.log("Listening on " + port);
