@@ -3,6 +3,8 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
+app.use(express.static(css + '/public'));
+app.use(express.static(js + '/public'));
 app.get('/', function(request, response) {
   var fs = require('fs');
   var buf = new Buffer(fs.readFileSync('index.html'),'utf-8');
