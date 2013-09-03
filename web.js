@@ -4,6 +4,7 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.use(express.static(__dirname + '/public'));
+app.use("/images", express.static(__dirname + '/images'));
 
 app.get('/', function (request, response) {
   var fs = require('fs');
